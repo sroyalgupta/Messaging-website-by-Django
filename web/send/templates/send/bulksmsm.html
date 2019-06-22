@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BulkSmsm page</title>
+</head>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<body>
+<script type="text/javascript">
+    swal({
+    icon: "success",
+    title: "Message sent!",
+    text: "Thankyou for using the service!",
+    type: "success"
+}).then(function() {
+    window.location = "/bulksms/";
+});
+</script>
+</body>
+</html>

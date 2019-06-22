@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>Index page</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<body>
+{% load static %}
+<!.. Navigation bar ..>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href=" /">My messaging website</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href=" /">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sms/">SMS Page</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://sroyalgupta.github.io/">About me</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<!.. Navigation bar ends ..>
+
+{% load staticfiles %}
+<form action="send/index" method="post">
+<div class="row">
+<div style="margin-top:100px;margin-left:130px;">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'send/smartphone.svg' %}" alt="Card image cap"
+       height="150" width="150">
+  <div class="card-body">
+    <center><h5 class="card-title">Send a text message</h5></center>
+    <p class="card-text">This will send SMS to the given mobile number
+      .Mobile number should be of DND number and will send message in duration
+      from 9AM to 9PM.</p>
+    <center><a href="sms/"><button type="button" class="btn btn-outline-primary" name="1">Send</button></a>
+</center>
+  </div>
+</div>
+</div>
+
+<div style="margin-top:100px;margin-left:130px;">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'send/message.svg' %}" alt="Card image cap"
+       height="150" width="150">
+  <div class="card-body">
+    <center><h5 class="card-title">Send multiple text messages</h5></center>
+    <p class="card-text">This will send bulk SMS to the given mobile numbers.
+      Mobile number should be of DND number and will send message in duration
+      from 9AM to 9PM.</p>
+    <center><a href="bulksms/"><button type="button" class="btn btn-outline-primary" name="2">Send</button></a>
+</center>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div style="margin-top:100px;margin-left:130px;">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'send/mail.svg' %}" alt="Card image cap"
+       height="150" width="150">
+  <div class="card-body">
+    <center><h5 class="card-title">Send a email</h5></center>
+    <p class="card-text">This will send email to a single user using SMTP protocol.
+      Will make use of gmail domain and port number 587.</p>
+    <center><a href="email/"><button type="button" class="btn btn-outline-primary" name="3">Send</button></a>
+</center>
+  </div>
+</div>
+</div>
+
+<div style="margin-top:100px;margin-left:130px;">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'send/business-and-finance.svg' %}" alt="Card image cap"
+       height="150" width="150">
+  <div class="card-body">
+    <center><h5 class="card-title">Send multiple emails</h5></center>
+    <p class="card-text">This will send emails to multiple users using SMTP protocol.
+      Will make use of gmail domain and port number 587.</p>
+    <center><a href="bulkemail/"><button type="button" class="btn btn-outline-primary" name="4">Send</button></a>
+</center>
+  </div>
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>
